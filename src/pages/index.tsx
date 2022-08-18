@@ -116,33 +116,34 @@ export default function HomePage() {
         </Box>
 
         <Box>
-          <HStack>
-            {profile.socials.map((social) => {
-              return (
-                <Link key={social.id} href={social.link} isExternal>
-                  <IconButton
-                    icon={SOCIAL_ICONS[social.id]}
-                    variant="link"
-                    size="lg"
-                    color="white"
-                    aria-label={social.name}
-                  />
-                </Link>
-              );
-            })}
-          </HStack>
-        </Box>
-
-        <Box>
           <VStack>
+            <Box>
+              <HStack>
+                {profile.socials.map((social) => {
+                  return (
+                    <Link key={social.id} href={social.link} isExternal>
+                      <IconButton
+                        icon={SOCIAL_ICONS[social.id]}
+                        variant="link"
+                        size="lg"
+                        color="white"
+                        aria-label={social.name}
+                      />
+                    </Link>
+                  );
+                })}
+              </HStack>
+            </Box>
             <Box>
               <Text fontSize="small" as="samp">
                 Made with <Icon as={HeartIcon} color="red" /> by Luan Oliveira
               </Text>
             </Box>
-            <Text fontSize="small" fontWeight="bold" color="gray.600">
-              All Rights Reserved © 2022
-            </Text>
+            <Box>
+              <Text fontSize="small" fontWeight="bold" color="gray.600">
+                All Rights Reserved © 2022
+              </Text>
+            </Box>
           </VStack>
         </Box>
       </VStack>
