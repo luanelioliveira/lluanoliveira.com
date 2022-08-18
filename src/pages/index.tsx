@@ -78,7 +78,12 @@ export default function HomePage() {
       <Head>
         <title>Home | {profile.name}</title>
       </Head>
-      <VStack spacing={16} height="100vh" align="center" justify="space-around">
+      <VStack
+        spacing={16}
+        height={['95vh', '100vh']}
+        align="center"
+        justify="space-around"
+      >
         <Box>
           <Center>
             <Image
