@@ -2,7 +2,7 @@ import { Box, Center, IconButton, useColorMode } from '@chakra-ui/react';
 
 import { RiMoonFill as MoonIcon, RiSunFill as SunIcon } from 'react-icons/ri';
 
-export default function ColorToogle() {
+export function ColorToogle() {
   const { colorMode, toggleColorMode } = useColorMode();
 
   return (

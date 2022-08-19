@@ -1,58 +1,18 @@
-import {
-  Box,
-  HStack,
-  Icon,
-  IconButton,
-  Link,
-  Text,
-  VStack,
-} from '@chakra-ui/react';
+import { Box, Icon, Text, VStack } from '@chakra-ui/react';
 
-import {
-  RiGithubFill as GithubIcon,
-  RiHeartFill as HeartIcon,
-  RiInstagramLine as InstagramIcon,
-  RiLinkedinBoxFill as LinkedinIcon,
-  RiMailFill as MailIcon,
-} from 'react-icons/ri';
-import { Profile, Social } from '../../types';
-import ColorToogle from '../ColorToogle';
+import { RiHeartFill as HeartIcon } from 'react-icons/ri';
 
-const SOCIAL_ICONS = {
-  instagram: <InstagramIcon />,
-  linkedin: <LinkedinIcon />,
-  github: <GithubIcon />,
-  mail: <MailIcon />,
-};
+import { ColorToogle } from '../ColorToogle';
+import { Socials } from './socials';
 
-interface FooterProps {
-  profile: Profile;
-}
-
-export function Footer({ profile }: FooterProps) {
+export function Footer() {
   return (
     <Box>
       <VStack>
-        <Box>
-          <HStack>
-            {profile.socials.map((social: Social) => {
-              return (
-                <Link key={social.id} href={social.link} isExternal>
-                  <IconButton
-                    icon={SOCIAL_ICONS[social.id]}
-                    variant="link"
-                    size="lg"
-                    aria-label={social.name}
-                  />
-                </Link>
-              );
-            })}
-          </HStack>
-        </Box>
-
+        <Socials />
         <Box>
           <Text fontSize="small" as="samp">
-            Made with <Icon as={HeartIcon} color="red" /> by {profile.name}
+            Made with <Icon as={HeartIcon} color="red" /> by Luan Oliveira
           </Text>
         </Box>
         <Box>

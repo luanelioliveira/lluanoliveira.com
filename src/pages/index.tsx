@@ -11,28 +11,6 @@ const profile = {
   role: 'Sr Software Engineer',
   message: 'helping companies build amazing products',
   avatar: 'https://github.com/luanelioliveira.png',
-  socials: [
-    {
-      id: 'instagram',
-      name: 'Instagram',
-      link: 'https://www.instagram.com/luanoliveira.dev',
-    },
-    {
-      id: 'linkedin',
-      name: 'Linkedin',
-      link: 'https://www.linkedin.com/in/luanoliveira',
-    },
-    {
-      id: 'github',
-      name: 'Github',
-      link: 'https://github.com/luanelioliveira',
-    },
-    {
-      id: 'mail',
-      name: 'Mail',
-      link: 'mailto:luannN@gmail.com',
-    },
-  ],
 } as Profile;
 
 export default function HomePage() {
@@ -78,7 +56,7 @@ export default function HomePage() {
           </Center>
         </Box>
 
-        <Footer profile={profile} />
+        <Footer />
       </VStack>
     </div>
   );
