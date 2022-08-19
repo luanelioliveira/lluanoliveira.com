@@ -78,7 +78,7 @@ export default function HomePage() {
   return (
     <div>
       <Head>
-        <title>Home | {profile.name}</title>
+        <title>{`Home | ${profile.name}`}</title>
       </Head>
       <VStack
         spacing={16}
