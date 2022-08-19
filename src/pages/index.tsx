@@ -10,6 +10,7 @@ import {
   Text,
   VStack,
 } from '@chakra-ui/react';
+
 import Head from 'next/head';
 
 import {
@@ -19,6 +20,7 @@ import {
   RiLinkedinBoxFill as LinkedinIcon,
   RiMailFill as MailIcon,
 } from 'react-icons/ri';
+import ColorToogle from '../components/ColorToogle';
 
 const SOCIAL_ICONS = {
   instagram: <InstagramIcon />,
@@ -126,7 +128,6 @@ export default function HomePage() {
                         icon={SOCIAL_ICONS[social.id]}
                         variant="link"
                         size="lg"
-                        color="white"
                         aria-label={social.name}
                       />
                     </Link>
@@ -144,6 +145,7 @@ export default function HomePage() {
                 All Rights Reserved © 2022
               </Text>
             </Box>
+            <ColorToogle />
           </VStack>
         </Box>
       </VStack>

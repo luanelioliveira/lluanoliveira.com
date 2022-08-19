@@ -1,7 +1,10 @@
-import { extendTheme } from '@chakra-ui/react';
+enum InitialColorMode {
+  DARK = 'dark',
+  LIGHT = 'light',
+}
 
-export const theme = extendTheme({
-  initialColorMode: 'dark',
+const config = {
+  initialColorMode: InitialColorMode.DARK,
   useSystemColorMode: false,
   colors: {
     gray: {
@@ -21,12 +24,6 @@ export const theme = extendTheme({
     heading: 'Roboto',
     body: 'Roboto',
   },
-  styles: {
-    global: {
-      body: {
-        bg: 'black',
-        color: 'gray.50',
-      },
-    },
-  },
-});
+};
+
+export default config;
