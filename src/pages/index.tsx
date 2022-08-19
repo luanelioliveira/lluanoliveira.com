@@ -1,48 +1,9 @@
-import {
-  Box,
-  Center,
-  Heading,
-  HStack,
-  Icon,
-  IconButton,
-  Image,
-  Link,
-  Text,
-  VStack,
-} from '@chakra-ui/react';
+import { Box, Center, Heading, Image, Text, VStack } from '@chakra-ui/react';
 
 import Head from 'next/head';
 
-import {
-  RiGithubFill as GithubIcon,
-  RiHeartFill as HeartIcon,
-  RiInstagramLine as InstagramIcon,
-  RiLinkedinBoxFill as LinkedinIcon,
-  RiMailFill as MailIcon,
-} from 'react-icons/ri';
-import ColorToogle from '../components/ColorToogle';
-
-const SOCIAL_ICONS = {
-  instagram: <InstagramIcon />,
-  linkedin: <LinkedinIcon />,
-  github: <GithubIcon />,
-  mail: <MailIcon />,
-};
-
-interface Social {
-  id: string;
-  name: string;
-  link: string;
-}
-
-interface Profile {
-  site: string;
-  name: string;
-  role: string;
-  message: string;
-  avatar: string;
-  socials: Social[];
-}
+import { Footer } from '../components/Footer';
+import { Profile } from '../types';
 
 const profile = {
   site: 'lluanoliveira.dev',
@@ -117,37 +78,7 @@ export default function HomePage() {
           </Center>
         </Box>
 
-        <Box>
-          <VStack>
-            <Box>
-              <HStack>
-                {profile.socials.map((social) => {
-                  return (
-                    <Link key={social.id} href={social.link} isExternal>
-                      <IconButton
-                        icon={SOCIAL_ICONS[social.id]}
-                        variant="link"
-                        size="lg"
-                        aria-label={social.name}
-                      />
-                    </Link>
-                  );
-                })}
-              </HStack>
-            </Box>
-            <Box>
-              <Text fontSize="small" as="samp">
-                Made with <Icon as={HeartIcon} color="red" /> by Luan Oliveira
-              </Text>
-            </Box>
-            <Box>
-              <Text fontSize="small" fontWeight="bold" color="gray.600">
-                All Rights Reserved © 2022
-              </Text>
-            </Box>
-            <ColorToogle />
-          </VStack>
-        </Box>
+        <Footer profile={profile} />
       </VStack>
     </div>
   );
