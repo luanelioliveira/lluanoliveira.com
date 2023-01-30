@@ -6,9 +6,9 @@ interface MessageProps {
 
 export function Message({ text }: MessageProps) {
   return (
-    <Box>
+    <Box px={'45px'}>
       <Center>
-        <Text fontSize="small" as="cite" color="gray.600">
+        <Text align="center" fontSize="small" as="cite" color="gray.600">
           {text}
         </Text>
       </Center>
