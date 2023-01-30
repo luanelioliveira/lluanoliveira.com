@@ -51,7 +51,7 @@ export default function HomePage() {
         <Box>
           <Center>
             <Text fontSize="small" as="cite" color="gray.600">
-              {profile.message} {'[...]'}
+              {profile.message}
             </Text>
           </Center>
         </Box>
