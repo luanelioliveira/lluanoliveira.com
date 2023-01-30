@@ -9,10 +9,6 @@ export const data: Profile = {
   avatar: 'https://github.com/luanelioliveira.png',
   socials: [
     {
-      id: 'instagram',
-      link: 'https://www.instagram.com/luanoliveira.dev',
-    },
-    {
       id: 'linkedin',
       link: 'https://www.linkedin.com/in/luanoliveira',
     },
