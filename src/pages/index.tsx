@@ -9,7 +9,7 @@ const profile = {
   site: 'lluanoliveira.dev',
   name: 'Luan Eli Oliveira',
   role: 'Sr Software Engineer',
-  message: 'helping companies build amazing products',
+  message: 'My passion is solving problems and developing solutions that make a positive impact on people\'s lives. ',
   avatar: 'https://github.com/luanelioliveira.png',
 } as Profile;
 
